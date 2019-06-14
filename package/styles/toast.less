@@ -1,0 +1,38 @@
+@import './theme.less';
+
+.jq-toast--outer{
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  width: 100%;
+  z-index: 9999;
+} 
+
+.jq-toast{ 
+  text-align: center;
+  color:#fff; 
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  transform: translateY(-100%);
+  transition: all .3s ease-in-out;
+  margin-bottom: 5px;
+}
+.jq-toast.jq-toast--error{
+  background-color: @color-danger;
+}
+.jq-toast.jq-toast--warning{
+  background-color: @color-warning;
+}
+.jq-toast.jq-toast--success{
+  background-color: @color-success;
+}
+.jq-toast.jq-toast--info{
+  background-color: @color-primary;
+}
+
+.jq-toast.is-active{ 
+  transform: translateY(0)
+}
